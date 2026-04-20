@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartões de Produto 3D - CSS Avançado</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="hero">
+            <h1>Cartões de Produto 3D</h1>
+            <p>Efeitos avançados com transformações CSS e interações hover</p>
+        </header>
+
+        <!-- Grid de Produtos -->
+        <main class="products-grid">
+            <!-- Produto 1: Efeito 3D Básico -->
+            <div class="product-card basic-3d">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="product-badge new">Novo</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80" 
+                                 alt="Fones de Ouvido Premium">
+                            <div class="image-overlay">
+                                <button class="quick-view">
+                                    <i class="fas fa-eye"></i>
+                                    Visualização Rápida
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Fones de Ouvido Bluetooth</h3>
+                            <p class="product-description">Som premium com cancelamento de ruído ativo</p>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="rating-value">4.5</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">R$ 299,90</span>
+                                <span class="original-price">R$ 399,90</span>
+                                <span class="discount">-25%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <button class="btn-wishlist">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <button class="btn-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+            </div>
+
+            <!-- Produto 2: Card com Flip -->
+            <div class="product-card flip-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="product-badge sale">Oferta</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80" 
+                                 alt="Câmera Profissional">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Câmera DSLR Profissional</h3>
+                            <div class="product-price">
+                                <span class="current-price">R$ 2.499,90</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <div class="back-content">
+                            <h3>Especificações</h3>
+                            <ul class="specs-list">
+                                <li><i class="fas fa-camera"></i> 24.2MP Sensor Full Frame</li>
+                                <li><i class="fas fa-video"></i> 4K Video Recording</li>
+                                <li><i class="fas fa-wifi"></i> Wi-Fi & Bluetooth</li>
+                                <li><i class="fas fa-bolt"></i> 5FPS Continuous Shooting</li>
+                            </ul>
+                            <div class="back-actions">
+                                <button class="btn-details">
+                                    <i class="fas fa-info-circle"></i>
+                                    Ver Detalhes
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produto 3: Card com Expansão -->
+            <div class="product-card expandable">
+                <div class="card-inner">
+                    <div class="product-badge popular">Popular</div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80" 
+                             alt="Smartwatch Moderno">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Smartwatch Series 5</h3>
+                        <p class="product-description">Monitor de saúde e fitness avançado</p>
+                        
+                        <div class="product-features">
+                            <div class="feature">
+                                <i class="fas fa-heartbeat"></i>
+                                <span>Monitor Cardíaco</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-moon"></i>
+                                <span>Tracker de Sono</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-battery-full"></i>
+                                <span>7 Dias de Bateria</span>
+                            </div>
+                        </div>
+
+                        <div class="color-options">
+                            <span class="option-label">Cores:</span>
+                            <div class="colors">
+                                <div class="color-option black active" data-color="black"></div>
+                                <div class="color-option silver" data-color="silver"></div>
+                                <div class="color-option gold" data-color="gold"></div>
+                            </div>
+                        </div>
+
+                        <div class="product-price">
+                            <span class="current-price">R$ 899,90</span>
+                        </div>
+                    </div>
+
+                    <div class="expanded-content">
+                        <div class="tech-specs">
+                            <h4>Características Técnicas</h4>
+                            <div class="spec-grid">
+                                <div class="spec-item">
+                                    <span class="spec-label">Tela:</span>
+                                    <span class="spec-value">1.5" AMOLED</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Resistência:</span>
+                                    <span class="spec-value">5ATM</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Conectividade:</span>
+                                    <span class="spec-value">Bluetooth 5.0</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Sistema:</span>
+                                    <span class="spec-value">iOS & Android</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <button class="btn-expand">
+                        <i class="fas fa-chevron-down"></i>
+                        Mais Informações
+                    </button>
+                    <button class="btn-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        Comprar
+                    </button>
+                </div>
+            </div>
+
+            <!-- Produto 4: Card com Efeito Parallax -->
+            <div class="product-card parallax">
+                <div class="parallax-background"></div>
+                <div class="card-inner">
+                    <div class="product-badge exclusive">Exclusivo</div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1605236453806-6ff36851218e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80" 
+                             alt="Console de Games">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Console Gaming Pro</h3>
+                        <p class="product-description">Experiência de jogo imersiva em 4K</p>
+                        
+                        <div class="product-highlights">
+                            <div class="highlight">
+                                <i class="fas fa-gamepad"></i>
+                                <span>120FPS</span>
+                            </div>
+                            <div class="highlight">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>SSD 1TB</span>
+                            </div>
+                            <div class="highlight">
+                                <i class="fas fa-broadcast-tower"></i>
+                                <span>Online Multiplayer</span>
+                            </div>
+                        </div>
+
+                        <div class="product-price">
+                            <span class="current-price">R$ 4.599,90</span>
+                            <div class="installment">ou 12x de R$ 383,32</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="parallax-foreground"></div>
+            </div>
+
+            <!-- Produto 5: Card com Reveal -->
+            <div class="product-card reveal">
+                <div class="card-inner">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80" 
+                             alt="Tênis Esportivo">
+                        <div class="reveal-content">
+                            <h3>Tecnologia AirMax</h3>
+                            <p>Amortecimento avançado para máximo conforto durante suas corridas</p>
+                            <div class="tech-features">
+                                <span>Respirável</span>
+                                <span>Amortecido</span>
+                                <span>Durável</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Tênis Running Pro</h3>
+                        <div class="product-price">
+                            <span class="current-price">R$ 459,90</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="size-selector">
+                    <span>Tamanho:</span>
+                    <div class="sizes">
+                        <button class="size-option">38</button>
+                        <button class="size-option">39</button>
+                        <button class="size-option active">40</button>
+                        <button class="size-option">41</button>
+                        <button class="size-option">42</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produto 6: Card Glassmorphism -->
+            <div class="product-card glass">
+                <div class="card-inner">
+                    <div class="product-badge limited">Edição Limitada</div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80" 
+                             alt="Smartphone Flagship">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Smartphone Pro Max</h3>
+                        <p class="product-description">Tela 6.7" 120Hz, Câmera Tripla 108MP</p>
+                        
+                        <div class="product-stats">
+                            <div class="stat">
+                                <span class="stat-value">256GB</span>
+                                <span class="stat-label">Armazenamento</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">8GB</span>
+                                <span class="stat-label">RAM</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">48h</span>
+                                <span class="stat-label">Bateria</span>
+                            </div>
+                        </div>
+
+                        <div class="product-price">
+                            <span class="current-price">R$ 3.999,90</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-reflection"></div>
+            </div>
+        </main>
+
+        <!-- Demonstração de Efeitos -->
+        <section class="effects-demo">
+            <h2>Efeitos CSS Utilizados</h2>
+            <div class="effects-grid">
+                <div class="effect-item">
+                    <div class="effect-preview transform-3d"></div>
+                    <h3>Transform 3D</h3>
+                    <p>rotateX, rotateY, perspective</p>
+                </div>
+                <div class="effect-item">
+                    <div class="effect-preview flip-effect"></div>
+                    <h3>Flip Animation</h3>
+                    <p>transform-style: preserve-3d</p>
+                </div>
+                <div class="effect-item">
+                    <div class="effect-preview parallax-effect"></div>
+                    <h3>Parallax Scrolling</h3>
+                    <p>background-attachment: fixed</p>
+                </div>
+                <div class="effect-item">
+                    <div class="effect-preview glass-effect"></div>
+                    <h3>Glassmorphism</h3>
+                    <p>backdrop-filter: blur()</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
